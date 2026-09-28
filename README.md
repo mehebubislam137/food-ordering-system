@@ -79,7 +79,6 @@ Open the local Vite URL shown in the terminal.
 
 ## How the data flow works
 
-```text
 React
   ↓
 Supabase JavaScript client
@@ -87,11 +86,11 @@ Supabase JavaScript client
 PostgreSQL
   ↓
 menu_items / orders / order_items
-```
+
 
 When a customer places an order:
 
-```text
+
 Checkout form
       ↓
 Insert into orders
@@ -103,10 +102,3 @@ Insert each cart item into order_items
 Show confirmation
       ↓
 Reload order history
-```
-
-## Beginner note
-
-The project intentionally keeps the code straightforward. It does not use authentication, Redux, TypeScript, a complicated state-management library, or a large UI framework.
-
-There is also a small fallback menu in `src/data/fallbackMenu.js`. If `.env` has not been configured yet, the website can still open and show the UI. Orders require Supabase to be connected.
